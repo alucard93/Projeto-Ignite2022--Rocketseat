@@ -40,4 +40,12 @@ jsx = JAVASCRIPT + XML
 # # Propriedades 
 - informações que a gente pode passar para outros componentes
 - atributos no contexto de react são propriedades
-- 
+  
+
+  # # CSS MODULE
+  - CRIA O ARQUIVO COM O NOME DO COMPONENTE SEGUIDO DE MODULE E .CSS EX: Header.module.css
+  - IMPORT NO ARQUIVO QUE QUER UTILIZAR SEGUINDO O SEGUINTE EXEMPLO: 
+    import styles from './Header.module.css'
+
+#
+# ESTILIZAÇÃO GLOBAL
