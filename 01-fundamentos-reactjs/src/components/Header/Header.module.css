@@ -8,3 +8,9 @@
 .header img {
     height: 2rem;
 }
+
+.header img::after { 
+    content: "teste";
+    padding: 0 0.25rem;
+    color: black;
+}
