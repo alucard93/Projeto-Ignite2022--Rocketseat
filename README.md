@@ -47,5 +47,10 @@ jsx = JAVASCRIPT + XML
   - IMPORT NO ARQUIVO QUE QUER UTILIZAR SEGUINDO O SEGUINTE EXEMPLO: 
     import styles from './Header.module.css'
 
-#
-# ESTILIZAÇÃO GLOBAL
+
+# 3 MOMENTOS QUE O COMPONENTE RENDERIZA NOVAMENTE
+  - Quando o estado muda
+  - Quando a propriedade altera
+  - Quando um componente pai renderiza novamente
+
+---

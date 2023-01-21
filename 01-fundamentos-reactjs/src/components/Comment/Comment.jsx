@@ -1,11 +1,17 @@
 import styles from './Comment.module.css'
 import { ThumbsUp, Trash } from 'phosphor-react'
 import { Avatar } from '../Avatar/Avatar'
+import av from '../../assets/Ignite-logo.svg'
 
-export const Comment = () => {
+export const Comment = ({ content, deleteComment }) => {
+
+  function handleDeleteComment () {
+    deleteComment(content)
+  }
+
   return (
     <div className={styles.comment}>
-      <Avatar hasBorder={false} src="https://github.com/alucard93.png" />
+      <Avatar hasBorder={false} src={av} />
       
       <div className={styles.commentBox}>
 
@@ -13,15 +19,15 @@ export const Comment = () => {
           <header>
             <div className={styles.authorAndTime}>
               <strong>Marcus Vinicius</strong>
-              <time title="11 de maio às 08:13h" dataTime="2022-05-11 08:13:30">Cerca de 1h atrás</time>
+              <time title="11 de maio às 08:13h" dateTime="2022-05-11 08:13:30">Cerca de 1h atrás</time>
             </div>
 
-            <button title='Deletar comentário'>
+            <button onClick={handleDeleteComment} title='Deletar comentário'>
               <Trash size={24}/>
             </button>
           </header>
 
-          <p>Muito bom Devon, parabéns!! 👏👏</p>
+          <p>{content}</p>
         </div>
         <footer>
           <button>
