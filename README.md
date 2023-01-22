@@ -54,3 +54,16 @@ jsx = JAVASCRIPT + XML
   - Quando um componente pai renderiza novamente
 
 ---
+
+# Nunca se deve chamar uma execução de função ex: {handleSubmit()}
+  - ela gera um loop infinito visto que o react atualiza quando o estado, propriedade e o elemento pai se atualiza
+  
+  # Devido a isso devemos chamar a função caso seja necessario passar parametro na função criamos uma função anonima {() => handleSubmit()}
+
+  # Sempre quando você for atualizar uma informação e essa informação depende do valor que ela tinha anteriormente e sempre legal usar esse padrão de funções
+
+  function handleLikeComment () {
+    setLikeCount((state) => {
+      return state + 1
+    })
+  }
